@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="nav-bar">
+            <button class="menu-btn" id="openSidebar">&#9776; Menu</button>
+            <h1>Delicious Restaurant - Dashboard</h1>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar">
+        <button class="close-btn" id="closeSidebar">&times;</button>
+        <h3>Dashboard</h3>
+        <ul>
+            <li><a href="#pasta">Pasta</a></li>
+            <li><a href="#burger">Burger</a></li>
+            <li><a href="#pizza">Pizza</a></li>
+            <li><a href="#cold-drinks">Cold Drinks</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Section -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <h2>Welcome to Delicious Restaurant Dashboard</h2>
+            <p>Manage your delightful dining experiences.</p>
+        </section>
+
+        <!-- Dashboard Menu Items Section -->
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+            <div class="menu-items">
+                <div class="item" id="pasta">
+                    <img src="images/pasta.jpg" alt="Pasta" style="width:100%; height:auto;">
+                    <h3>Pasta</h3>
+                    <p>Delicious Italian pasta with fresh ingredients.</p>
+                    <span>$12</span>
+                    <form action="order.php" method="POST">
+                        <input type="hidden" name="item" value="Pasta">
+                        <input type="hidden" name="price" value="12">
+                        <button type="submit">Order Now</button>
+                    </form>
+                </div>
+                <div class="item" id="burger">
+                    <img src="images/burger.jpg" alt="Burger" style="width:100%; height:auto;">
+                    <h3>Burger</h3>
+                    <p>Juicy burgers with a variety of toppings.</p>
+                    <span>$10</span>
+                    <form action="order.php" method="POST">
+                        <input type="hidden" name="item" value="Burger">
+                        <input type="hidden" name="price" value="10">
+                        <button type="submit">Order Now</button>
+                    </form>
+                </div>
+                <div class="item" id="pizza">
+                    <img src="images/pizza.jpg" alt="Pizza" style="width:100%; height:auto;">
+                    <h3>Pizza</h3>
+                    <p>Hot and cheesy pizzas made to perfection.</p>
+                    <span>$15</span>
+                    <form action="order.php" method="POST">
+                        <input type="hidden" name="item" value="Pizza">
+                        <input type="hidden" name="price" value="15">
+                        <button type="submit">Order Now</button>
+                    </form>
+                </div>
+                <div class="item" id="cold-drinks">
+                    <img src="images/cold-drinks.jpg" alt="Cold Drinks" style="width:100%; height:auto;">
+                    <h3>Cold Drinks</h3>
+                    <p>Refreshing beverages to cool you down.</p>
+                    <span>$3</span>
+                    <form action="order.php" method="POST">
+                        <input type="hidden" name="item" value="Cold Drinks">
+                        <input type="hidden" name="price" value="3">
+                        <button type="submit">Order Now</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reservation Section -->
+        <section id="reservation">
+            <h2>Make a Reservation</h2>
+            <form action="reservation.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" name="guests" min="1" required>
+
+                <button type="submit">Reserve Now</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Delicious Restaurant. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript to enhance user experience, if needed.
+    </script>
+</body>
+</html>
